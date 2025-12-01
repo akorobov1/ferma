@@ -1,0 +1,57 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-image: url('assets/background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+body[data-tool="shovel"] {
+  cursor: url('assets/tools/shovel.png') 16 16, auto;
+}
+body[data-tool="bucket"] {
+  cursor: url('assets/tools/bucket.png') 16 16, auto;
+}
+body[data-tool="seeds"] {
+  cursor: url('assets/tools/seeds.png') 16 16, auto;
+}
+
+#toolbar {
+  margin: 10px;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  grid-template-rows: repeat(10, 40px);
+  gap: 2px;
+  justify-content: center;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+.cell:hover {
+  outline: 2px solid #00cc00;
+  z-index: 1;
+}
+
+.cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
